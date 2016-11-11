@@ -7,10 +7,12 @@ var database = require('./config/database'); 			// load the database config
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var mongoUrl = database.remoteUrl;
+var mongoUrl = database.remote.Url;
+var mongoOptions = database.remote.Options;
 // configuration ===============================================================
-mongoose.connect(mongoUrl); 	// Connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
+mongoose.connect(mongoUrl, mongoOptions); 	// Connect to local MongoDB instance. A remoteUrl is also available (modulus.io)
 console.log("connected to " + mongoUrl);
+mongoose.useDb("meanstacktutorials");
 app.use(express.static('./public')); 		// set the static files location /public/img will be /img for users
 app.use(morgan('dev')); // log every request to the console
 app.use(bodyParser.urlencoded({'extended': 'true'})); // parse application/x-www-form-urlencoded
