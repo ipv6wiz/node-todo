@@ -7,7 +7,8 @@ module.exports = {
             pass: 'Plethy1320#test2016',
             authMechanism: 'SCRAM-SHA-1',
             db: {
-                databaseName: 'meanstacktutorials'
+                databaseName: 'meanstacktutorials',
+                authSource: 'meanstacktutorials'
             }
         }
     }
