@@ -3,14 +3,11 @@ module.exports = {
     remote: {
         Url: 'mongodb://ec2-54-183-160-10.us-west-1.compute.amazonaws.com:27017',
         Options: {
-            user: 'madmin',
-            pass: 'Plethy1320#dev2016',
+            user: 'testadmin',
+            pass: 'Plethy1320#test2016',
             authMechanism: 'SCRAM-SHA-1',
             db: {
-                databaseName: 'meanstacktutorials',
-                options: {
-                    authSource: 'admin'
-                }
+                databaseName: 'meanstacktutorials'
             }
         }
     }
